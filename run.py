@@ -23,7 +23,7 @@ class TornadoApplication(tornado.web.Application):
 
 def main():
     app = TornadoApplication()
-    app.listen(options.port)
+    app.listen(options.port, address=options.address)
     tornado.ioloop.IOLoop.current().start()
 
 
